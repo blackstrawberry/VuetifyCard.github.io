@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 모바일 기기 접속 시 화면 크기 조절을 위해 뷰포트 설정 -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+   <!-- vueify.js에 필요한 스타일 링크 연결 -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <title>Cards</title>
+</head>
+<body>
+    <div id="app">
+        <v-app>
+            <v-main  class="mx-auto">
+                <v-container>
+                    <!-- 카드 UI 사용을 선언하는 v-card 엘리먼트 -->
+                    <v-card max-width="400">
+                        <!-- 카드 상단에 이미지 배치 -->
+                        <v-img src="https://picsum.photos/id/197/400/300/?bur" aspect-ratio="2.3"></v-img>
+                        <!-- 카드 중간에 텍스트 배치 -->
+                        <v-card-text>
+                            <div>
+                                <!-- 제목의 타이포그래피 스타일을 title로 설정 -->
+                                <!-- 하단의 margin을 2로 설정 -->
+                                <h2 class="title secondary--text mb-2">감성적인 기차길🚂</h2>
+                                기차길을 보고있으면 훌쩍 여행을 떠나고 싶은 기분이 드네요. 코로나가 끝나면 기차여행을 떠나보는건 어떠신가요?🚝🚅🚄🚞
+                            </div>
+                        </v-card-text>
+                        <!-- 카드 하단에 버튼 배치 -->
+                        <v-card-actions>
+                            <!-- 버튼 색상은 빨간색으로 설정 -->
+                            <v-btn outlined color="red">❤</v-btn>
+                            <!-- outline으로 버튼의 배경색 없앰 -->
+                            <v-btn color="blue white--text">다음</v-btn>
+                            <v-btn color="purple white--text">취소</v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-container>
+            </v-main>
+        </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify()
+        })
+    </script>
+</body>
+</html>
